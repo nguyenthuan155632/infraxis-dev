@@ -1,0 +1,58 @@
+.form-container {
+    position: relative;
+}
+
+input.form-control {
+    height: 45px;
+}
+
+label.control-label {
+    line-height: 32px;
+    text-align: left;
+}
+
+.sns-login button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 3px;
+}
+
+.btn-submit {
+    background-color: #308e38;
+}
+
+.btn-facebook {
+    background-color: #3A5A98;
+    margin-left: 5px !important;
+}
+
+.btn-google {
+    background-color: #C73D2D;
+}
+
+i.fa {
+    color: #fff;
+}
+
+i.fa-facebook {
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+i.fa-google {
+    padding-top: 2px;
+    font-size: 27px;
+}
+
+i.fa-sign-in {
+    padding-top: 4px;
+    font-size: 24px;
+}
+
+.validate.alert {
+    padding: 3px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}

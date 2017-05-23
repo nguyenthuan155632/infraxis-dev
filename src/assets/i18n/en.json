@@ -1,0 +1,41 @@
+{
+    "LANGUAGE": {
+        "SELECT": "Language",
+        "en": "English",
+        "vi": "Vietnamese"
+    },
+    "MESSAGES": {
+        "login": {
+            "title": "Login",
+            "success": "Login successfully!",
+            "error": "Cannot login! Please try again!"
+        },
+        "logout": {
+            "title": "Logout",
+            "success": "Logout successfully!"
+        },
+        "signup": {
+            "title": "Signup",
+            "success": "Signup successfully!"
+        }
+    },
+    "LOGIN": {
+        "title": "Login",
+        "email": "Email",
+        "password": "Password",
+        "account": "Don't have an account?"
+    },
+    "SIGNUP": {
+        "title": "Join now",
+        "email": "Email",
+        "password": "Password",
+        "back": "GO BACK"
+    },
+    "VALIDATE": {
+        "required": "Field is required.",
+        "minlength": "Field must be at least 6 characters long.",
+        "maxlength": "Field cannot be more than 24 characters long.",
+        "email": "Invalid Email!",
+        "mismatch": "Password and confirm password does not match."
+    }
+}

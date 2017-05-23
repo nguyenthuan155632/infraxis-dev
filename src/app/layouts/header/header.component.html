@@ -1,0 +1,12 @@
+<div class="header-wrapper">
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6 status-bar">
+        <ul>
+            <li *ngFor="let lang of langs; let i = index"><button (click)="translate.use(lang.prefix)"><img [src]="lang.thumbnail" /></button></li>
+        </ul>
+        <span *ngIf="authenticated && currentUser">{{ currentUser.email }}</span>
+        <button *ngIf="authenticated && currentUser" (click)="logout()" class="btn-signout"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+    </div>
+</div>

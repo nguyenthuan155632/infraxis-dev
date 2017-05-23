@@ -1,0 +1,41 @@
+{
+    "LANGUAGE": {
+        "SELECT": "Ngôn ngữ",
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt"
+    },
+    "MESSAGES": {
+        "login": {
+            "title": "Đăng nhập",
+            "success": "Đăng nhập thành công!",
+            "error": "Không thể đăng nhập! Vui lòng thử lại!"
+        },
+        "logout": {
+            "title": "Đăng xuất",
+            "success": "Đăng xuất thành công!"
+        },
+        "signup": {
+            "title": "Đăng ký",
+            "success": "Đăng ký thành công!"
+        }
+    },
+    "LOGIN": {
+        "title": "Đăng nhập",
+        "email": "Email",
+        "password": "Password",
+        "account": "Đăng ký tài khoản?"
+    },
+    "SIGNUP": {
+        "title": "Đăng ký",
+        "email": "Email",
+        "password": "Password",
+        "back": "Quay lại"
+    },
+    "VALIDATE": {
+        "required": "Trường không thể rỗng.",
+        "minlength": "Đề nghị ít nhất 6 ký tự",
+        "maxlength": "Đề nghị nhiều nhất 24 ký tự",
+        "email": "Sai định dạng email!",
+        "matchpwd": "Password và confirm password không trùng nhau."
+    }
+}
