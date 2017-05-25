@@ -1,0 +1,4 @@
+<div id="note-wrapper" [style.top.px]="topPosition" [style.left.px]="leftPosition" [style.height.px]="innerHeight" [style.width.px]="innerWidth" (window:resize)="onResize($event)">
+    <div class="window-minimize" *ngIf="isMaximize" (click)="windowMinimize()"><i class="fa fa-window-minimize" aria-hidden="true"></i></div>
+    <div class="window-maximize" *ngIf="!isMaximize" (click)="windowMaximize()"><i class="fa fa-window-maximize" aria-hidden="true"></i></div>
+</div>

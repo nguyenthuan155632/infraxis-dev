@@ -3,7 +3,7 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { MessageService } from './../../services/message.service';
-import { Router } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   langs: any[] = [];
   currentUser: any;
   authenticated: boolean = false;
+  currentTitle: string = '';
 
   constructor(private translate: TranslateService, 
               private af: AngularFireAuth, 
@@ -49,6 +50,14 @@ export class HeaderComponent implements OnInit {
         this.subscribeMsg();
       }
     });
+
+    // Subscribe router Navigation
+    router.events.subscribe(params => {
+      if(params instanceof NavigationStart) {
+        let title = params.url.split('/').slice(-1)[0];
+        this.currentTitle = title.charAt(0).toUpperCase() + title.slice(1);
+      }
+    });
   }
 
   ngOnInit() {
@@ -70,6 +79,10 @@ export class HeaderComponent implements OnInit {
     this.translate.get('MESSAGES').subscribe((resMsg: string) => {
       this.messageService.sendMsg(resMsg);
     });
+  }
+
+  naviHome() {
+    this.router.navigate(['dashboard']);
   }
 
   logout() {

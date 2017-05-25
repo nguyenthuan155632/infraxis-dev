@@ -47,7 +47,8 @@ i.fa-google {
 }
 
 i.fa-sign-in {
-    padding-top: 4px;
+    padding-top: 2px;
+    padding-right: 1px;
     font-size: 24px;
 }
 

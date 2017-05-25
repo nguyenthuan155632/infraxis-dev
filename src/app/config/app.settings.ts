@@ -6,4 +6,7 @@ export class AppSettings {
       lastOnBottom: true,
       showProgressBar: false
     };
+
+  public static HEADER_HEIGHT = 50;
+  public static MENU_WIDTH = 60;
 }

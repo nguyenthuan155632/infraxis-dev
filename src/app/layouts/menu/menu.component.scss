@@ -1,0 +1,16 @@
+.menu-wrapper {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            text-align: center;
+            cursor: pointer;
+            img {
+                width: 30px;
+            }
+        }
+    }
+}

@@ -16,6 +16,7 @@
     background-color: #fff;
     position: relative;
     float: right;
+    cursor: pointer;
 }
 
 .card-board button {
@@ -65,6 +66,9 @@ img.bg-img {
 }
 
 @media (max-width: 768px) {
+    #dashboard {
+        margin-top: 25px;
+    }
     .card-board {
         width: 95%;
         margin-right: 10px;

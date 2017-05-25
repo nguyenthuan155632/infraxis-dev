@@ -18,6 +18,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MembersComponent } from './components/members/members.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NoteComponent } from './components/infra/note/note.component';
+import { MenuComponent } from './layouts/menu/menu.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+import { InfraComponent } from './components/infra/infra.component';
 
 // Routes
 import { RouterModule, Routes } from '@angular/router';
@@ -49,7 +53,11 @@ export function HttpLoaderFactory(http: Http) {
     SignupComponent,
     MembersComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    NoteComponent,
+    MenuComponent,
+    FooterComponent,
+    InfraComponent
   ],
   imports: [
     BrowserModule,

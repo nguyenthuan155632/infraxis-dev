@@ -1,8 +1,6 @@
 <div class="header-wrapper">
-    <div class="col-sm-6">
-
-    </div>
-    <div class="col-sm-6 status-bar">
+    <div class="col-sm-12 status-bar">
+        <div class="web-name" (click)="naviHome()">Infraxis Development <small>{{ currentTitle }}</small></div>
         <ul>
             <li *ngFor="let lang of langs; let i = index"><button (click)="translate.use(lang.prefix)"><img [src]="lang.thumbnail" /></button></li>
         </ul>

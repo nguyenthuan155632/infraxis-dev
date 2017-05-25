@@ -1,6 +1,23 @@
 .header-wrapper {
     padding: 10px 20px;
     height: 50px;
+    background: #1C1C1C;
+    color: #fff;
+}
+
+.web-name {
+    float: left;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #55B3FF;
+    cursor: pointer;
+}
+
+.web-name small {
+    font-size: 70%;
+    color: #fff;
+    vertical-align: sub;
 }
 
 ul {
@@ -50,5 +67,27 @@ span {
 }
 
 .btn-signout i {
-    padding-top: 4px;
+    padding-top: 3px;
+    padding-left: 2px;
+}
+
+@media (max-width: 768px) {
+    .header-wrapper {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .web-name {
+        font-size: 13px;
+    }
+    span {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    span {
+        display: none;
+    }
 }

@@ -1,0 +1,20 @@
+#note-wrapper {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-top: 25px solid #252525;
+    .window-minimize {
+        position: absolute;
+        top: -27px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+    }
+    .window-maximize {
+        position: absolute;
+        top: -23px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+    }
+}
