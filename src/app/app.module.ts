@@ -19,9 +19,19 @@ import { SignupComponent } from './components/signup/signup.component';
 import { MembersComponent } from './components/members/members.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NoteComponent } from './components/infra/note/note.component';
+import { ChartComponent } from './components/infra/note/chart/chart.component';
+import { InformationComponent } from './components/infra/note/information/information.component';
+import { NewsComponent } from './components/infra/note/news/news.component';
+import { AdvertisementComponent } from './components/infra/note/advertisement/advertisement.component';
 import { MenuComponent } from './layouts/menu/menu.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { InfraComponent } from './components/infra/infra.component';
+import { ContainerComponent } from './components/infra/container/container.component';
+import { CurrenciesComponent } from './components/infra/currencies/currencies.component';
+import { BitcoinComponent } from './components/infra/currencies/bitcoin/bitcoin.component';
+import { EthereumComponent } from './components/infra/currencies/ethereum/ethereum.component';
+import { RippleComponent } from './components/infra/currencies/ripple/ripple.component';
+import { NoteFullPageComponent } from './components/infra/note/note-full-page/note-full-page.component';
 
 // Routes
 import { RouterModule, Routes } from '@angular/router';
@@ -41,6 +51,12 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// Directives
+import { NoteDirective } from './directives/note.directive';
+
+// Chart
+import { ChartModule } from 'angular2-highcharts';
+
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
@@ -57,7 +73,18 @@ export function HttpLoaderFactory(http: Http) {
     NoteComponent,
     MenuComponent,
     FooterComponent,
-    InfraComponent
+    InfraComponent,
+    CurrenciesComponent,
+    BitcoinComponent,
+    ContainerComponent,
+    EthereumComponent,
+    RippleComponent,
+    NoteDirective,
+    ChartComponent,
+    InformationComponent,
+    NewsComponent,
+    AdvertisementComponent,
+    NoteFullPageComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +96,7 @@ export function HttpLoaderFactory(http: Http) {
     RouterModule.forRoot(appRoutes),
     AlertModule.forRoot(),
     SimpleNotificationsModule.forRoot(),
+    // ChartModule.forRoot(require('highcharts')),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,4 +1,4 @@
-<div id="infra-menu" [style.top.px]="topPosition" [style.width.px]="innerWidth" [style.height.px]="innerHeight">
+<div id="infra-menu" [style.top.px]="topPosition" [style.width.px]="innerWidth" [style.height.px]="innerHeight" (window:resize)="onResize($event)">
     <app-menu></app-menu>
 </div>
 <router-outlet></router-outlet>

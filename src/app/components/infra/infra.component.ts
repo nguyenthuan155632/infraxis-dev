@@ -23,4 +23,8 @@ export class InfraComponent implements OnInit {
   ngOnInit() {
   }
 
+  onResize(event) {
+    this.innerHeight = event.target.innerHeight - AppSettings.HEADER_HEIGHT;
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 import { AppSettings } from './../../../config/app.settings';
 
 @Component({
@@ -8,40 +8,20 @@ import { AppSettings } from './../../../config/app.settings';
 })
 export class NoteComponent implements OnInit {
 
-  innerHeight: number;
-  innerWidth: number;
-  isMaximize: boolean = true;
-  topPosition: number;
-  leftPosition: number;
+  @Input() noteType: string;
+  @Output() maximize = new EventEmitter<string>();
 
-  constructor() { 
-
-    this.innerHeight = (window.innerHeight) - AppSettings.HEADER_HEIGHT;
-    this.innerWidth = (window.innerWidth) - AppSettings.MENU_WIDTH;
-    this.topPosition = AppSettings.HEADER_HEIGHT;
-    this.leftPosition = AppSettings.MENU_WIDTH;
-
+  constructor(private el: ElementRef) { 
   }
 
   ngOnInit() {
-    console.log(this.innerHeight);
   }
 
   onResize(event) {
-    if(this.isMaximize) {
-      this.innerHeight = event.target.innerHeight - AppSettings.HEADER_HEIGHT;
-      this.innerWidth = event.target.innerWidth - AppSettings.MENU_WIDTH;
-    }
-  }
-
-  windowMinimize() {
-    this.innerWidth = Math.round(this.innerWidth / 2);
-    this.isMaximize = false;
   }
 
   windowMaximize() {
-    this.innerWidth = (window.innerWidth) - AppSettings.MENU_WIDTH;
-    this.isMaximize = true;
+    this.maximize.emit(this.noteType);
   }
 
 }

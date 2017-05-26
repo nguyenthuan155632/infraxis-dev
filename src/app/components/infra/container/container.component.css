@@ -1,0 +1,11 @@
+.container-wrapper {
+    position: absolute;
+}
+
+.row,
+.col-sm-6,
+.col-xs-6 {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
