@@ -13,6 +13,7 @@ import { CurrenciesComponent } from './components/infra/currencies/currencies.co
 import { BitcoinComponent } from './components/infra/currencies/bitcoin/bitcoin.component';
 import { EthereumComponent } from './components/infra/currencies/ethereum/ethereum.component';
 import { RippleComponent } from './components/infra/currencies/ripple/ripple.component';
+import { DemoChartsComponent } from './components/infra/currencies/demo-charts/demo-charts.component';
 
 
 export const appRoutes: Routes = [
@@ -25,7 +26,8 @@ export const appRoutes: Routes = [
     { path: 'currencies', component: CurrenciesComponent, children: [
         { path: 'bitcoin', component: BitcoinComponent },
         { path: 'ethereum', component: EthereumComponent },
-        { path: 'ripple', component: RippleComponent }
+        { path: 'ripple', component: RippleComponent },
+        { path: 'demo-charts', component: DemoChartsComponent }
       ] },
     { path: 'note', component: NoteComponent }
   ], canActivate: [AuthGuard] }

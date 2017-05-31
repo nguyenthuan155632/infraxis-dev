@@ -17,6 +17,9 @@ export class InfraComponent implements OnInit {
     this.innerHeight = (window.innerHeight) - AppSettings.HEADER_HEIGHT;
     this.innerWidth = AppSettings.MENU_WIDTH;
     this.topPosition = AppSettings.HEADER_HEIGHT;
+    if(window.innerWidth < 768) {
+      this.innerHeight = (window.innerHeight - AppSettings.HEADER_HEIGHT) * 2;
+    }
 
   }
 
@@ -25,6 +28,9 @@ export class InfraComponent implements OnInit {
 
   onResize(event) {
     this.innerHeight = event.target.innerHeight - AppSettings.HEADER_HEIGHT;
+    if(event.target.innerWidth < 768) {
+      this.innerHeight = (event.target.innerHeight - AppSettings.HEADER_HEIGHT) * 2;
+    }
   }
 
 }

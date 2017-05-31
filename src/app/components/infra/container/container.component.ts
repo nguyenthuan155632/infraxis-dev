@@ -25,6 +25,8 @@ export class ContainerComponent implements OnInit {
     this.innerWidth = (window.innerWidth) - AppSettings.MENU_WIDTH;
     this.topPosition = AppSettings.HEADER_HEIGHT;
     this.leftPosition = AppSettings.MENU_WIDTH;
+    // console.log(window.innerWidth);
+    // console.log(this.innerWidth);
 
   }
 
@@ -34,10 +36,11 @@ export class ContainerComponent implements OnInit {
   onResize(event) {
     this.innerHeight = event.target.innerHeight - AppSettings.HEADER_HEIGHT;
     this.innerWidth = event.target.innerWidth - AppSettings.MENU_WIDTH;
+    // console.log(event.target.innerWidth);
+    // console.log(window.innerWidth);
   }
 
   onMaximize(noteType: Event) {
-    console.log(noteType);
     this.isHide = false;
     this.type = noteType.toString();
   }

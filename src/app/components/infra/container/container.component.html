@@ -1,29 +1,25 @@
 <div class="container-wrapper" [style.height.px]="innerHeight" [style.width.px]="innerWidth" [style.top.px]="topPosition" [style.left.px]="leftPosition" (window:resize)="onResize($event)">
     <div class="row">
-        <div class="col-sm-6 col-xs-6" [style.height.px]="innerHeight/2">
+        <div class="col-sm-6 col-xs-12" [style.height.px]="innerHeight/2">
             <app-note (maximize)="onMaximize($event)" [noteType]="'chart'">
-                <h2>Chart</h2>
                 <app-chart [infra]="infra"></app-chart>
             </app-note>
         </div>
-        <div class="col-sm-6 col-xs-6" [style.height.px]="innerHeight/2">
+        <div class="col-sm-6 col-xs-12" [style.height.px]="innerHeight/2">
             <app-note (maximize)="onMaximize($event)" [noteType]="'information'">
-                <h2>Information</h2>
-                <app-information></app-information>
+                <app-information [infra]="infra"></app-information>
             </app-note>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 col-xs-6" [style.height.px]="innerHeight/2">
+        <div class="col-sm-6 col-xs-12" [style.height.px]="innerHeight/2">
             <app-note (maximize)="onMaximize($event)" [noteType]="'news'">
-                <h2>News</h2>
-                <app-news></app-news>
+                <app-news [infra]="infra"></app-news>
             </app-note>
         </div>
-        <div class="col-sm-6 col-xs-6" [style.height.px]="innerHeight/2">
+        <div class="col-sm-6 col-xs-12" [style.height.px]="innerHeight/2">
             <app-note (maximize)="onMaximize($event)" [noteType]="'advertisement'">
-                <h2>Advertisement</h2>
-                <app-advertisement></app-advertisement>
+                <app-advertisement [infra]="infra"></app-advertisement>
             </app-note>
         </div>
     </div>
@@ -31,9 +27,9 @@
 
 <div class="container-wrapper" style="background: #fff;" *ngIf="!isHide" [style.height.px]="innerHeight" [style.width.px]="innerWidth" [style.top.px]="topPosition" [style.left.px]="leftPosition" (window:resize)="onResize($event)">
     <app-note-full-page (minimize)="onMinimize($event)">
-        <app-chart *ngIf="type == 'chart'"></app-chart>
-        <app-information *ngIf="type == 'information'"></app-information>
-        <app-news *ngIf="type == 'news'"></app-news>
-        <app-advertisement *ngIf="type == 'advertisement'"></app-advertisement>
+        <app-chart *ngIf="type == 'chart'" [infra]="infra" [isFull]="true"></app-chart>
+        <app-information *ngIf="type == 'information'" [infra]="infra" [isFull]="true"></app-information>
+        <app-news *ngIf="type == 'news'" [infra]="infra"></app-news>
+        <app-advertisement *ngIf="type == 'advertisement'" [infra]="infra"></app-advertisement>
     </app-note-full-page>
 </div>

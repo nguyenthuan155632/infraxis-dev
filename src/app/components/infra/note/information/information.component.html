@@ -1,3 +1,17 @@
-<p>
-  information works!
-</p>
+<div class="information-wrapper">
+    <table width="100%" height="100%" align="center" valign="center">
+        <tr>
+            <td>
+                <div class="row"><img src="/assets/images/{{ infraCoin }}.png" [style.width.px]="imgWidth" /></div>
+                <div class="row">
+                    <p [style.fontSize.px]="spotFontSize">{{ spot_price }}</p>
+                </div>
+                <div class="row buy-sell" [style.fontSize.px]="descFontSize">
+                    <i class="fa fa-btc" aria-hidden="true"></i> {{ buy_price }} -
+                    <i class="fa fa-usd" aria-hidden="true"></i> {{ sell_price }} -
+                    <i class="fa fa-exchange" aria-hidden="true"></i> {{ exchange_price }}
+                </div>
+            </td>
+        </tr>
+    </table>
+</div> 

@@ -1,4 +1,3 @@
-<p>
-    chart works! {{ infra }}
-</p>
-<!--<chart [options]="options"></chart>-->
+<div class="chart-wrapper" (window:resize)="onResize($event)">
+    <chart type="StockChart" [options]="options"></chart>
+</div>

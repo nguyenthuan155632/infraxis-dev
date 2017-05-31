@@ -1,0 +1,21 @@
+.information-wrapper {
+    text-align: center;
+    height: 100%;
+}
+
+p {
+    font-weight: 600;
+}
+
+.buy-sell {
+    color: #424242;
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 100px;
+    }
+    p {
+        font-size: 45px;
+    }
+}
